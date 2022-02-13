@@ -8,10 +8,18 @@ import { ProfileComponent } from '../profile/profile.component';
   styleUrls: ['./search-input.component.css']
 })
 export class SearchInputComponent implements OnInit {
+
+  
   public userQuery!: string;
-  @Output() searchResult = new EventEmitter<any>()  
+  @Output() searchResult = new EventEmitter<any>() 
+  
+  
   constructor() { }
 
+
+  searchUser(){
+    this.searchResult.emit(this.userQuery);
+  }
   ngOnInit(): void {
   }
 
