@@ -62,7 +62,7 @@ export class SearchRequestService {
           resolve()
         },
         error=>{
-          this.repos.name = "We couldn’t find any repositories matching the name given"
+          this.repos.name = "We couldn’t find any matching repositories"
   
           reject(error)
           })

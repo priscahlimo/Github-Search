@@ -24,16 +24,16 @@ export class ProfileComponent implements OnInit {
     (error)=>{
       console.log(error)
     });
-    // this.searchService.getRepo(username).then((success)=>{
-    //  this.repos = this.searchService.repos;
-    // },
-    // (error)=>{
-    //   console.log(error)
-    // });
+    this.searchService.getUserRepo(username).then((success)=>{
+     this.repos = this.searchService.repos;
+    },
+    (error)=>{
+      console.log(error)
+    });
   }
 
   ngOnInit(): void {
-    this.searchUser('priscahlimo');
+    this.searchUser("priscahlimo");
   }
 
 }
