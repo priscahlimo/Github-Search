@@ -44,30 +44,30 @@ export class SearchRequestService {
       })
       return promise;
     }
-    // getRepo(username:string){
-    //   interface ApiResponse{
-    //     name:string;
-    //     html_url:string;
-    //     description:string;
-    //     language:string;
-    //     created_at:Date
+    getUserRepo(username:string){
+      interface ApiResponse{
+        name:string;
+        html_url:string;
+        description:string;
+        language:string;
+        created_at:Date
         
-    //   }
-    //   let repoUrl = 'https://api.github.com/users/'+username+'/repos?order=created&sort=asc?client_id='+environment.clientId + '&client_secret='+environment.clientSecret;
-    //   let promise = new Promise<void>((resolve,reject) =>{
-    //     this.http.get<ApiResponse>(repoUrl).toPromise().then
-    //     (response => {
-    //         this.repos = response;
-    //         console.log(this.repos);
-    //       resolve()
-    //     },
-    //     error=>{
-    //       this.repos.name = "We couldn’t find any repositories matching the name given"
+      }
+      let repoUrl = 'https://api.github.com/users/'+username+'/repos?order=created&sort=asc?client_id='+environment.clientId + '&client_secret='+environment.clientSecret;
+      let promise = new Promise<void>((resolve,reject) =>{
+        this.http.get<ApiResponse>(repoUrl).toPromise().then
+        (response => {
+            this.repos = response;
+            console.log(this.repos);
+          resolve()
+        },
+        error=>{
+          this.repos.name = "We couldn’t find any repositories matching the name given"
   
-    //       reject(error)
-    //       })
-    //     })
-    //     return promise;
+          reject(error)
+          })
+        })
+        return promise;
 
-    //   }
+      }
 }
