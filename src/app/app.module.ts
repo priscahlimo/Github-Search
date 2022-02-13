@@ -9,13 +9,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { SearchInputComponent } from './search-input/search-input.component';
 import { DateCountPipe } from './date-count.pipe';
 import { RepositoriesComponent } from './repositories/repositories.component';
-import { Routes, RouterModule } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
-const routes: Routes = [
-  { path: 'profile', component: ProfileComponent},
-  { path: 'repositories', component: RepositoriesComponent},
-];
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +21,8 @@ const routes: Routes = [
     ProfileComponent,
     SearchInputComponent,
     DateCountPipe,
-    RepositoriesComponent
+    RepositoriesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
