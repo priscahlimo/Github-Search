@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class SearchRequestService {
+  
   user!:Username;
   repos!:Repo;
   constructor(private http:HttpClient) { 
