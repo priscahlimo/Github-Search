@@ -1,5 +1,9 @@
 # GithubSearch
 
+## By Priscah Limo - 13th Feb 2022
+
+This is a project that is created to help a user find github users,projects, description and technologies used.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
 
 ## Development server
@@ -24,4 +28,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
+## Email: priscah.limo@student.moringaschool.com
+
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## License
+
+MIT License
+
+## Copyright @priscah_Limo 2022
