@@ -2,23 +2,43 @@
     <div class="row">
         <div class="col">
             <div class="row" id="image">
-                <img src="" alt="">
+                <img src="{{user.avatar_url}}" class="rounded-circle img-fluid" alt="">
             </div>
             <div class="row" id="username">
-
+                <h2>{{user.name}}</h2>
             </div>
             <div class="row">
-                <div class="col" id="following"></div>
-                <div class="col" id="followers"></div>
+                <div class="col" id="following">
+                    <p>Following: {{user.following}}</p>
+                </div>
+                <div class="col" id="followers">
+                    <p>Followers: {{user.followers}}</p>
+                </div>
             </div>
         </div>
         <div class="col">
             <div class="row">
                 <h3>Popular repositories</h3>
-                <div class="col" id="repos">
-                    <div class="row"></div>
-                    <div class="row"></div>
-                    <div class="row"></div>
+                <div class="col"*ngFor="let repo of repos" id="repos">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4><a href="{{repo.html_url}}">{{repo.name}}</a></h4>
+                        </div> 
+                        <div class="card-body">
+                            <p class="card-text">{{repo.description}} </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <small>Language: {{repo.language}}</small> 
+                                </div>
+                                <div class="col-md-6">
+                                    <small>Created: {{repo.created_at| dateCount}}</small> 
+                                </div>
+                            </div>
+                          
+                        </div>  
+                    </div>
                 </div>
                 
             </div>
