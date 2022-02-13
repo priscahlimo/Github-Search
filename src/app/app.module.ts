@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SearchInputComponent } from './search-input/search-input.component';
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    SearchInputComponent
+    SearchInputComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
