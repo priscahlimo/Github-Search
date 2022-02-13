@@ -27,23 +27,23 @@ export class SearchRequestService {
         public_repos:number;
     }
 
-    // let userUrl = 'https://api.github.com/users/'+username+'?client_id='+environment.clientId + "&client_secret="+environment.clientSecret;
+    let userUrl = 'https://api.github.com/users/'+username+'?client_id='+environment.clientId + "&client_secret="+environment.clientSecret;
 
-    // let promise = new Promise<void>((resolve,reject) =>{
-    //   this.http.get<ApiResponse>(userUrl).toPromise().then
-    //   (response => {
-    //     this.user = response;
+    let promise = new Promise<void>((resolve,reject) =>{
+      this.http.get<ApiResponse>(userUrl).toPromise().then
+      (response => {
+        this.user = response;
 
-    //     resolve()
-    //   },
-    //   error=>{
-    //     this.user.name = "We couldn’t find any users matching the name given"
+        resolve()
+      },
+      error=>{
+        this.user.name = "We couldn’t find any users matching the name given"
 
-    //     reject(error)
-    //     })
-    //   })
-    //   return promise;
-    // }
+        reject(error)
+        })
+      })
+      return promise;
+    }
     // getRepo(username:string){
     //   interface ApiResponse{
     //     name:string;
