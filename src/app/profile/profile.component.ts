@@ -10,8 +10,8 @@ import { SearchRequestService } from '../search-http/search-request.service';
 })
 export class ProfileComponent implements OnInit {
 
-  user!: Username;
-  repos!:Repo;
+  user: Username;
+  repos:any;
 
   constructor(public searchService: SearchRequestService) {
 

@@ -19,7 +19,7 @@
         <div class="col">
             <div class="row">
                 <h3>Popular repositories</h3>
-                <div class="col"*ngFor="let repo of repos" id="repos">
+                <div class="col"*ngFor="let repo of repos">
                     <div class="card">
                         <div class="card-header">
                             <h4><a href="{{repo.html_url}}">{{repo.name}}</a></h4>
@@ -33,7 +33,7 @@
                                     <small>Language: {{repo.language}}</small> 
                                 </div>
                                 <div class="col-md-6">
-                                    <small>Created: {{repo.created_at| dateCount}}</small> 
+                                    <!-- <small>Created: {{repo.created_at| dateCount}}</small>  -->
                                 </div>
                             </div>
                           
