@@ -8,14 +8,22 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SearchInputComponent } from './search-input/search-input.component';
 import { DateCountPipe } from './date-count.pipe';
+import { RepositoriesComponent } from './repositories/repositories.component';
+import { Routes, RouterModule } from '@angular/router';
 
+
+const routes: Routes = [
+  { path: 'profile', component: ProfileComponent},
+  { path: 'repositories', component: RepositoriesComponent},
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     SearchInputComponent,
-    DateCountPipe
+    DateCountPipe,
+    RepositoriesComponent
   ],
   imports: [
     BrowserModule,
